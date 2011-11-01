@@ -25,10 +25,13 @@ def setupMenu(editor):
 
 def resetLeech(editor):
     n = "Reset Leech b"
-   # if mw.currentCard.hasTag("leech")
+    # if mw.currentCard.hasTag("leech")
+    # Reps(known as "Reviews" inside of Anki) is set
+    # to 1 instead of 0 because of a generic
+    # database error.
     editor.currentCard.reps = 1
     editor.deck.refresh()
-       # mw.currentCard.delTag("leech")
+    # mw.currentCard.delTag("leech")
 
 addHook("editor.setupMenus", setupMenu)
     
