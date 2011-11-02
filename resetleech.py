@@ -30,8 +30,8 @@ def resetLeech(editor):
     # to 1 instead of 0 because of a generic
     # database error.
     editor.currentCard.reps = 1
-    editor.deck.refresh()
-    # mw.currentCard.delTag("leech")
+    editor.deleteTags(tags="Leech", label=False)
+    editor.onSuspend(sus=False)
 
 addHook("editor.setupMenus", setupMenu)
     
